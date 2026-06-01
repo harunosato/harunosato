@@ -650,7 +650,7 @@
           <dt class="info-dt">営業時間</dt><dd class="info-dd">9:00〜17:00（サービス提供：9:30〜16:30）</dd>
           <dt class="info-dt">定員</dt><dd class="info-dd">14名</dd>
           <dt class="info-dt">送迎エリア</dt><dd class="info-dd">ひたちなか市内（市外は1kmあたり100円）</dd>
-          <dt class="info-dt">管理者</dt><dd class="info-dd">野口 敏</dd>
+          <dt class="info-dt">管理者</dt><dd class="info-dd">鈴木 良明</dd>
         </dl>
       </div>
 
@@ -692,11 +692,11 @@
       <div class="modal-section">
         <p class="modal-sec-title">職員体制</p>
         <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
-          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">管理者 1名</span>
-          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">生活相談員 2名</span>
-          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">介護職員 4名</span>
-          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">機能訓練指導員 1名</span>
-          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">看護職員 2名</span>
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">管理者　鈴木 良明</span>
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">生活相談員</span>
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">介護職員</span>
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">機能訓練指導員</span>
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">看護職員</span>
         </div>
       </div>
 
@@ -727,7 +727,7 @@
           <dt class="info-dt">営業日</dt><dd class="info-dd">月曜日〜日曜日（年中無休）</dd>
           <dt class="info-dt">営業時間</dt><dd class="info-dd">7:00〜19:00</dd>
           <dt class="info-dt">対応エリア</dt><dd class="info-dd">ひたちなか市内（市外は1kmあたり50円）</dd>
-          <dt class="info-dt">管理者</dt><dd class="info-dd">大枝 好秋</dd>
+          <dt class="info-dt">管理者</dt><dd class="info-dd">森本 由紀江</dd>
         </dl>
       </div>
 
@@ -765,9 +765,9 @@
       <div class="modal-section">
         <p class="modal-sec-title">職員体制</p>
         <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
-          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">管理者 1名</span>
-          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">サービス提供責任者 1名</span>
-          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">介護員 5名</span>
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">管理者　森本 由紀江</span>
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">サービス提供責任者</span>
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">訪問介護員</span>
         </div>
       </div>
 
@@ -1027,9 +1027,17 @@
 
   function driveImgUrl(url) {
     if (!url) return '';
-    // 通常のURL（Gyazo・Imgur等）はそのまま使用
+    // Gyazo ページURL → 直接画像URLに自動変換
+    // 例: gyazo.com/abc123 → i.gyazo.com/abc123.png
+    if (url.includes('gyazo.com/') && !url.includes('i.gyazo.com')) {
+      const hash = url.split('gyazo.com/')[1].split('?')[0];
+      return `https://i.gyazo.com/${hash}.png`;
+    }
+    // i.gyazo.com の直接URLはそのまま
+    if (url.includes('i.gyazo.com')) return url;
+    // 通常のURL（imgur等）はそのまま使用
     if (!url.includes('drive.google.com') && !url.includes('docs.google.com')) return url;
-    // Google Drive → thumbnail形式に変換（安定して表示できる形式）
+    // Google Drive → thumbnail形式に変換
     const m = url.match(/\/d\/([a-zA-Z0-9_-]+)/) || url.match(/id=([a-zA-Z0-9_-]+)/);
     if (m) return `https://drive.google.com/thumbnail?id=${m[1]}&sz=w1200`;
     return url;
@@ -1170,31 +1178,31 @@
 <div id="mobile-cta" style="
   display:none;
   position:fixed; bottom:0; left:0; right:0; z-index:300;
-  background:rgba(20,30,40,0.97);
+  background:rgba(20,30,40,0.95);
   backdrop-filter:blur(8px);
-  padding:0.75rem 1rem;
-  padding-bottom:calc(0.75rem + env(safe-area-inset-bottom));
-  box-shadow:0 -4px 20px rgba(0,0,0,0.2);
-  gap:0.6rem;
+  padding:0.55rem 1rem;
+  padding-bottom:calc(0.55rem + env(safe-area-inset-bottom));
+  box-shadow:0 -2px 12px rgba(0,0,0,0.2);
+  gap:0.5rem;
 ">
   <a href="tel:0292292623" style="
-    flex:1; display:flex; align-items:center; justify-content:center; gap:0.4rem;
+    flex:1; display:flex; align-items:center; justify-content:center; gap:0.35rem;
     background:#4a6878; color:#fff; font-family:'Noto Sans JP',sans-serif;
-    font-size:0.82rem; font-weight:700; padding:0.7rem 0.5rem;
-    border-radius:8px; text-decoration:none; letter-spacing:0.03em;
+    font-size:0.75rem; font-weight:700; padding:0.5rem 0.4rem;
+    border-radius:6px; text-decoration:none; letter-spacing:0.02em;
   ">
-    <svg width="15" height="15" viewBox="0 0 22 22" fill="none">
+    <svg width="13" height="13" viewBox="0 0 22 22" fill="none">
       <path d="M6.5 4H4a2 2 0 00-2 2c0 9.25 7.75 17 17 17a2 2 0 002-2v-2.5a1 1 0 00-.8-.98l-3.2-.64a1 1 0 00-.96.3l-1.42 1.42a15.12 15.12 0 01-6.72-6.72l1.42-1.42a1 1 0 00.3-.96L8.48 4.8A1 1 0 007.5 4h-1z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
     </svg>
     お電話で相談
   </a>
   <button onclick="openModal('contact-modal')" style="
-    flex:1; display:flex; align-items:center; justify-content:center; gap:0.4rem;
+    flex:1; display:flex; align-items:center; justify-content:center; gap:0.35rem;
     background:var(--accent); color:#fff; font-family:'Noto Sans JP',sans-serif;
-    font-size:0.82rem; font-weight:700; padding:0.7rem 0.5rem;
-    border-radius:8px; border:none; cursor:pointer; letter-spacing:0.03em;
+    font-size:0.75rem; font-weight:700; padding:0.5rem 0.4rem;
+    border-radius:6px; border:none; cursor:pointer; letter-spacing:0.02em;
   ">
-    <svg width="15" height="15" viewBox="0 0 18 18" fill="none">
+    <svg width="13" height="13" viewBox="0 0 18 18" fill="none">
       <rect x="2" y="4" width="14" height="10" rx="2" stroke="#fff" stroke-width="1.5"/>
       <path d="M2 7l7 4 7-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
@@ -1205,8 +1213,7 @@
 <style>
   @media (max-width: 767px) {
     #mobile-cta { display: flex !important; }
-    /* モバイルCTAの高さ分だけフッターに余白を追加 */
-    footer { padding-bottom: 5rem; }
+    footer { padding-bottom: 4rem; }
   }
 </style>
 
