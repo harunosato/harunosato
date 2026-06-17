@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サービス付き高齢者向け住宅 はるのさと｜茨城県ひたちなか市</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-inner">
+    <a href="#home" class="logo-area">
+      <div class="logo-mark">
+        <svg viewBox="0 0 28 28" fill="none">
+  <defs>
+    <path id="sk" d="M14,14 C10.5,12 9.5,8 11.5,5.8 Q13,4.2 14,5.5 Q15,4.2 16.5,5.8 C18.5,8 17.5,12 14,14Z"/>
+  </defs>
+  <use href="#sk" fill="rgba(255,255,255,0.92)" transform="rotate(0,14,14)"/>
+  <use href="#sk" fill="rgba(255,240,244,0.88)" transform="rotate(72,14,14)"/>
+  <use href="#sk" fill="rgba(255,255,255,0.92)" transform="rotate(144,14,14)"/>
+  <use href="#sk" fill="rgba(255,240,244,0.88)" transform="rotate(216,14,14)"/>
+  <use href="#sk" fill="rgba(255,255,255,0.92)" transform="rotate(288,14,14)"/>
+  <circle cx="14" cy="14" r="2.8" fill="rgba(255,200,215,0.95)"/>
+  <circle cx="14" cy="11.4" r="0.55" fill="rgba(255,160,180,0.9)"/>
+  <circle cx="12.2" cy="12.6" r="0.55" fill="rgba(255,160,180,0.9)"/>
+  <circle cx="12.9" cy="14.9" r="0.55" fill="rgba(255,160,180,0.9)"/>
+  <circle cx="15.1" cy="14.9" r="0.55" fill="rgba(255,160,180,0.9)"/>
+  <circle cx="15.8" cy="12.6" r="0.55" fill="rgba(255,160,180,0.9)"/>
+</svg>
+      </div>
+      <div class="logo-text">
+        <span class="corp">サービス付き高齢者向け住宅</span>
+        <span class="name">はるのさと</span>
+      </div>
+    </a>
+    <nav class="global-nav">
+      <a href="#home">ホーム</a>
+      <a href="#news">新着情報</a>
+      <a href="#facilities">サービス</a>
+      <a href="#access">アクセス</a>
+      <button style="background:none;border:1.5px solid var(--accent);color:var(--accent);font-family:'Noto Sans JP',sans-serif;font-size:0.78rem;font-weight:700;padding:0.4rem 0.9rem;border-radius:6px;cursor:pointer;margin-right:0.4rem;transition:all 0.2s;white-space:nowrap;" onclick="openModal('recruit-modal')" onmouseover="this.style.background='rgba(200,120,96,0.12)'" onmouseout="this.style.background='none'">採用情報</button>
+      <button class="nav-cta" onclick="openModal('contact-modal')">お問い合わせ</button>
+    </nav>
+    <button class="hamburger" id="hamburger-btn"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#home"       onclick="closeMNav()">ホーム</a>
+  <a href="#news"       onclick="closeMNav()">新着情報</a>
+  <a href="#facilities" onclick="closeMNav()">サービス紹介</a>
+  <a href="#access"     onclick="closeMNav()">アクセス</a>
+  <a href="#"           onclick="closeMNav();openModal('recruit-modal');return false;">採用情報</a>
+  <a href="#"           onclick="closeMNav();openModal('contact-modal');return false;">お問い合わせ</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">社会福祉法人 春寿会</div>
+    <h1 class="hero-catch">安心と笑顔に満ちあふれる家</h1>
+    <p class="hero-sub">地域に根差し、入居者様の満足度の高いサ高住を目指しています。<br>全室個室・24時間スタッフ常駐・デイサービス＆訪問介護を併設。</p>
+    <div class="hero-btns">
+      <button class="btn-w" onclick="openModal('room-modal')">暮らし・費用を見る</button>
+      <button class="btn-ol" onclick="openModal('contact-modal')">見学を申し込む</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="num">20<span>室</span></div><div class="label">全室個室（1F6・2F14）</div></div>
+      <div class="stat-div"></div>
+      <div class="stat-item"><div class="num">24<span>時間</span></div><div class="label">スタッフ常駐</div></div>
+      <div class="stat-div"></div>
+      <div class="stat-item"><div class="num">0<span>円</span></div><div class="label">敷金・礼金なし</div></div>
+      <div class="stat-div"></div>
+      <div class="stat-item"><div class="num">随時</div><div class="label">体験入居受付中</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="section section-white" id="news">
+  <div class="si">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;">
+      <div><div class="title-bar"></div><div class="sec-label">News</div><h2 class="sec-title">新着情報</h2></div>
+    </div>
+    <!-- ローディング中 -->
+    <div id="news-loading" style="display:flex;flex-direction:column;gap:0;">
+      <div style="padding:1.2rem 0.5rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:flex;gap:1rem;align-items:center;">
+        <div style="width:130px;height:14px;background:#e8ddd4;border-radius:4px;flex-shrink:0;"></div>
+        <div style="height:14px;background:#e8ddd4;border-radius:4px;flex:1;"></div>
+      </div>
+      <div style="padding:1.2rem 0.5rem;border-bottom:1px solid var(--border);display:flex;gap:1rem;align-items:center;">
+        <div style="width:130px;height:14px;background:#ede5dc;border-radius:4px;flex-shrink:0;"></div>
+        <div style="height:14px;background:#ede5dc;border-radius:4px;flex:1;"></div>
+      </div>
+      <div style="padding:1.2rem 0.5rem;border-bottom:1px solid var(--border);display:flex;gap:1rem;align-items:center;">
+        <div style="width:130px;height:14px;background:#e8ddd4;border-radius:4px;flex-shrink:0;"></div>
+        <div style="height:14px;background:#e8ddd4;border-radius:4px;flex:1;"></div>
+      </div>
+    </div>
+    <!-- ニュースリスト（JS で描画） -->
+    <div id="news-list"></div>
+    <p id="news-error" style="display:none;font-size:0.85rem;color:var(--text-sub);padding:1rem 0;">情報を読み込めませんでした。しばらくしてから再度アクセスしてください。</p>
+  </div>
+</section>
+
+<!-- 桜枝区切り -->
+<div style="text-align:center;padding:0.5rem 0;background:var(--bg-white);line-height:0;">
+  <svg width="320" height="32" viewBox="0 0 320 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.45;">
+    <path d="M20 16 Q80 8 160 16 Q240 24 300 16" stroke="#c47888" stroke-width="1" fill="none"/>
+    <!-- 左の花 -->
+    <circle cx="60" cy="11" r="1.5" fill="#c47888"/>
+    <ellipse cx="60" cy="7" rx="2" ry="3" fill="#e8a0b8" transform="rotate(0 60 11)"/>
+    <ellipse cx="60" cy="7" rx="2" ry="3" fill="#e8a0b8" transform="rotate(72 60 11)"/>
+    <ellipse cx="60" cy="7" rx="2" ry="3" fill="#e8a0b8" transform="rotate(144 60 11)"/>
+    <ellipse cx="60" cy="7" rx="2" ry="3" fill="#e8a0b8" transform="rotate(216 60 11)"/>
+    <ellipse cx="60" cy="7" rx="2" ry="3" fill="#e8a0b8" transform="rotate(288 60 11)"/>
+    <!-- 中央の花 -->
+    <circle cx="160" cy="16" r="1.5" fill="#c47888"/>
+    <ellipse cx="160" cy="12" rx="2" ry="3" fill="#e8a0b8" transform="rotate(0 160 16)"/>
+    <ellipse cx="160" cy="12" rx="2" ry="3" fill="#e8a0b8" transform="rotate(72 160 16)"/>
+    <ellipse cx="160" cy="12" rx="2" ry="3" fill="#e8a0b8" transform="rotate(144 160 16)"/>
+    <ellipse cx="160" cy="12" rx="2" ry="3" fill="#e8a0b8" transform="rotate(216 160 16)"/>
+    <ellipse cx="160" cy="12" rx="2" ry="3" fill="#e8a0b8" transform="rotate(288 160 16)"/>
+    <!-- 右の花 -->
+    <circle cx="260" cy="21" r="1.5" fill="#c47888"/>
+    <ellipse cx="260" cy="17" rx="2" ry="3" fill="#e8a0b8" transform="rotate(0 260 21)"/>
+    <ellipse cx="260" cy="17" rx="2" ry="3" fill="#e8a0b8" transform="rotate(72 260 21)"/>
+    <ellipse cx="260" cy="17" rx="2" ry="3" fill="#e8a0b8" transform="rotate(144 260 21)"/>
+    <ellipse cx="260" cy="17" rx="2" ry="3" fill="#e8a0b8" transform="rotate(216 260 21)"/>
+    <ellipse cx="260" cy="17" rx="2" ry="3" fill="#e8a0b8" transform="rotate(288 260 21)"/>
+    <!-- 花びら散り -->
+    <ellipse cx="100" cy="20" rx="2.5" ry="2" fill="#f8d0dc" transform="rotate(30 100 20)" opacity="0.7"/>
+    <ellipse cx="200" cy="10" rx="2" ry="1.5" fill="#f8d0dc" transform="rotate(-20 200 10)" opacity="0.7"/>
+    <ellipse cx="140" cy="25" rx="2" ry="1.5" fill="#f8d0dc" transform="rotate(50 140 25)" opacity="0.6"/>
+    <ellipse cx="230" cy="14" rx="2.5" ry="2" fill="#f8d0dc" transform="rotate(-40 230 14)" opacity="0.6"/>
+  </svg>
+</div>
+<!-- SERVICES -->
+<section class="section section-alt" id="facilities">
+  <div class="si">
+    <div style="text-align:center;margin-bottom:3rem;"><div class="title-bar" style="display:block;margin:0 auto 0.75rem;"></div><div class="sec-label">Services</div><h2 class="sec-title">サービス紹介</h2><p class="sec-desc" style="margin:0 auto;">住まいと介護サービスが一体。必要なサービスを組み合わせてご利用いただけます。</p></div>
+    <div class="svc-grid">
+      <!-- 住まい -->
+      <div class="svc-card" onclick="openModal('room-modal')" role="button" tabindex="0">
+        <div class="ctb"></div>
+        <div class="card-img" style="padding:0;overflow:hidden;">
+          <img src="images/service-room.jpg" alt="サービス付き高齢者向け住宅" style="width:100%;height:100%;object-fit:contain;background:#f4f7f8;">
+        </div>
+        <div class="card-body">
+          <p class="card-tag-label">住まい</p>
+          <h3 class="card-title">サービス付き高齢者向け住宅<br>「はるのさと」</h3>
+          <p class="card-desc">全室個室・24時間スタッフ常駐。自宅と同じように生活しながら、安心の見守りと生活支援を受けられます。</p>
+          <span class="card-cta">居室・費用の詳細を見る <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </div>
+      <!-- デイ -->
+      <div class="svc-card" onclick="openModal('day-modal')" role="button" tabindex="0">
+        <div class="ctb ctb2"></div>
+        <div class="card-img" style="padding:0;overflow:hidden;">
+          <img src="images/service-day.jpg" alt="デイサービス" style="width:100%;height:100%;object-fit:contain;background:#f4f7f8;">
+        </div>
+        <div class="card-body">
+          <p class="card-tag-label" style="color:#5a7890;">通所サービス</p>
+          <h3 class="card-title">デイサービス<br>「はるのさとデイ」</h3>
+          <p class="card-desc">日帰りで入浴・食事・機能訓練・レクリエーション。送迎サービスあり。</p>
+          <span class="card-cta" style="color:#5a7890;">詳細・料金を見る <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </div>
+      <!-- 訪問 -->
+      <div class="svc-card" onclick="openModal('visit-modal')" role="button" tabindex="0">
+        <div class="ctb ctb3"></div>
+        <div class="card-img" style="padding:0;overflow:hidden;">
+          <img src="images/service-kaigo.jpg" alt="訪問介護" style="width:100%;height:100%;object-fit:contain;background:#f4f7f8;">
+        </div>
+        <div class="card-body">
+          <p class="card-tag-label" style="color:#6a8070;">在宅サービス</p>
+          <h3 class="card-title">訪問介護<br>「はるのさと訪問」</h3>
+          <p class="card-desc">身体介護から生活援助まで、お部屋を訪問してサポート。介護度や状況に合わせて柔軟に対応。</p>
+          <span class="card-cta" style="color:#6a8070;">詳細・料金を見る <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </div>
+    </div>
+    <!-- 隣接案内 -->
+    <div style="margin-top:2rem;background:var(--bg-white);border:1px solid var(--border);border-radius:12px;padding:1.5rem 2rem;display:flex;gap:2rem;flex-wrap:wrap;">
+      <div style="flex:1;min-width:220px;"><p style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;color:var(--primary);margin-bottom:0.4rem;">ADJACENT</p><p style="font-size:0.9rem;font-weight:700;color:var(--text);margin-bottom:0.3rem;">隣接：特別養護老人ホーム「春寿園」</p><p style="font-size:0.8rem;color:var(--text-sub);line-height:1.85;">同法人運営の特養が敷地内に隣接。介護度が上がっても地域での継続ケアが可能です。</p></div>
+      <div style="width:1px;background:var(--border);align-self:stretch;"></div>
+      <div style="flex:1;min-width:220px;"><p style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;color:var(--primary-light);margin-bottom:0.4rem;">CARE MANAGEMENT</p><p style="font-size:0.9rem;font-weight:700;color:var(--text);margin-bottom:0.3rem;">地域のケアマネジャーと連携</p><p style="font-size:0.8rem;color:var(--text-sub);line-height:1.85;">地域近隣の居宅介護支援事業所と連携しています。担当ケアマネジャーがいる方はご入居後もそのままお続きいただけます。</p></div>
+    </div>
+
+    <!-- 医療連携ボタン -->
+    <div style="margin-top:1.25rem;text-align:center;">
+      <button onclick="openModal('medical-modal')" style="
+        display:inline-flex;align-items:center;gap:0.5rem;
+        background:none;border:1.5px solid var(--border);
+        color:var(--text-sub);font-family:'Noto Sans JP',sans-serif;
+        font-size:0.82rem;font-weight:600;padding:0.6rem 1.5rem;
+        border-radius:6px;cursor:pointer;transition:all 0.2s;
+        letter-spacing:0.04em;
+      "
+      onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'"
+      onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-sub)'"
+      >
+        <svg width="15" height="15" viewBox="0 0 18 18" fill="none">
+          <path d="M9 1v8M5 5l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 11v4a1 1 0 001 1h10a1 1 0 001-1v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        医療・看護連携について
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL: 施設長メッセージ -->
+<div class="modal-overlay" id="msg-director" onclick="overlayClose(event,'msg-director')">
+  <div class="modal-box" style="max-width:580px;">
+    <div class="modal-header">
+      <h2 class="modal-title">施設長からのご挨拶</h2>
+      <button class="modal-close" onclick="closeModal('msg-director')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="display:flex;gap:1.5rem;align-items:flex-start;flex-wrap:wrap;">
+        <div style="flex-shrink:0;text-align:center;">
+          <div style="width:100px;height:120px;background:var(--bg-section);border:2px dashed var(--border);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.4rem;">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="12" r="6" stroke="var(--border)" stroke-width="1.5"/><path d="M4 28c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="var(--border)" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <p style="font-size:0.62rem;color:var(--text-sub);line-height:1.5;">顔写真<br>（準備中）</p>
+          </div>
+          <p style="font-size:0.72rem;color:var(--text-sub);margin-top:0.6rem;">施設長</p>
+          <p style="font-size:0.9rem;font-weight:700;color:var(--text);">大枝 好秋</p>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <p style="font-size:0.88rem;color:var(--text);line-height:2.2;font-family:'Noto Serif JP',serif;">
+            はるのさとは、ご入居者おひとりおひとりが<br>
+            「ここに住んでよかった」と感じていただける場所を<br>
+            目指して日々取り組んでいます。<br>
+            安心して暮らせる環境と、温かい支援を<br>
+            スタッフ一同でお届けしてまいります。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: 通所管理者メッセージ -->
+<div class="modal-overlay" id="msg-day" onclick="overlayClose(event,'msg-day')">
+  <div class="modal-box" style="max-width:580px;">
+    <div class="modal-header">
+      <h2 class="modal-title">通所介護 管理者からのご挨拶</h2>
+      <button class="modal-close" onclick="closeModal('msg-day')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="display:flex;gap:1.5rem;align-items:flex-start;flex-wrap:wrap;">
+        <div style="flex-shrink:0;text-align:center;">
+          <div style="width:100px;height:120px;border-radius:8px;overflow:hidden;">
+            <img src="images/staff-suzuki.jpg" alt="鈴木良明" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          </div>
+          <p style="font-size:0.72rem;color:var(--text-sub);margin-top:0.6rem;">通所介護 管理者</p>
+          <p style="font-size:0.9rem;font-weight:700;color:var(--text);">鈴木 良明</p>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <p style="font-size:0.88rem;color:var(--text);line-height:2.2;font-family:'Noto Serif JP',serif;">
+            デイサービスはるのさとでは、来てよかったと<br>
+            思っていただける一日をつくることを大切にしています。<br>
+            入浴・食事・機能訓練を通じて、<br>
+            ご自宅での生活が少しでも長く続けられるよう、<br>
+            スタッフ全員で丁寧にサポートします。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: 訪問管理者メッセージ -->
+<div class="modal-overlay" id="msg-visit" onclick="overlayClose(event,'msg-visit')">
+  <div class="modal-box" style="max-width:580px;">
+    <div class="modal-header">
+      <h2 class="modal-title">訪問介護 管理者からのご挨拶</h2>
+      <button class="modal-close" onclick="closeModal('msg-visit')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="display:flex;gap:1.5rem;align-items:flex-start;flex-wrap:wrap;">
+        <div style="flex-shrink:0;text-align:center;">
+          <div style="width:100px;height:120px;background:var(--bg-section);border:2px dashed var(--border);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.4rem;">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="12" r="6" stroke="var(--border)" stroke-width="1.5"/><path d="M4 28c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="var(--border)" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <p style="font-size:0.62rem;color:var(--text-sub);line-height:1.5;">顔写真<br>（準備中）</p>
+          </div>
+          <p style="font-size:0.72rem;color:var(--text-sub);margin-top:0.6rem;">訪問介護 管理者</p>
+          <p style="font-size:0.9rem;font-weight:700;color:var(--text);">森本 由紀江</p>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <p style="font-size:0.88rem;color:var(--text);line-height:2.2;font-family:'Noto Serif JP',serif;">
+            住み慣れたお部屋で、その方らしく過ごせること。<br>
+            それが訪問介護の一番の目標だと考えています。<br>
+            身体介護から生活のお手伝いまで、<br>
+            ご利用者様のペースに寄り添いながら、<br>
+            安心してお任せいただける支援を心がけています。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: 採用情報 -->
+<div class="modal-overlay" id="recruit-modal" onclick="overlayClose(event,'recruit-modal')">
+  <div class="modal-box" style="max-width:620px;">
+    <div class="modal-header">
+      <div>
+        <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;color:var(--accent);text-transform:uppercase;margin-bottom:0.3rem;">Recruit</p>
+        <h2 class="modal-title">採用情報</h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('recruit-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <div style="background:var(--bg-section);border-radius:10px;padding:2rem;text-align:center;margin-bottom:1.75rem;">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" style="margin:0 auto 1rem;">
+          <circle cx="24" cy="16" r="8" stroke="var(--accent)" stroke-width="2"/>
+          <path d="M8 44c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M32 28l4 4 8-8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p style="font-family:'Noto Serif JP',serif;font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:0.6rem;">一緒に働きませんか</p>
+        <p style="font-size:0.85rem;color:var(--text-sub);line-height:1.9;">
+          （採用情報は準備中です）<br>
+          お電話またはお問い合わせフォームより<br>
+          お気軽にご連絡ください。
+        </p>
+      </div>
+
+      <div style="background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;">
+        <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;color:var(--text-sub);text-transform:uppercase;margin-bottom:0.75rem;">募集職種（準備中）</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+          <span style="font-size:0.8rem;background:var(--bg-section);padding:0.35rem 0.9rem;border-radius:20px;color:var(--text-sub);">介護職員</span>
+          <span style="font-size:0.8rem;background:var(--bg-section);padding:0.35rem 0.9rem;border-radius:20px;color:var(--text-sub);">看護職員</span>
+          <span style="font-size:0.8rem;background:var(--bg-section);padding:0.35rem 0.9rem;border-radius:20px;color:var(--text-sub);">訪問介護員</span>
+          <span style="font-size:0.8rem;background:var(--bg-section);padding:0.35rem 0.9rem;border-radius:20px;color:var(--text-sub);">機能訓練指導員</span>
+          <span style="font-size:0.8rem;background:var(--bg-section);padding:0.35rem 0.9rem;border-radius:20px;color:var(--text-sub);">生活相談員</span>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+        <a href="tel:0292292623" style="flex:1;display:flex;align-items:center;justify-content:center;gap:0.4rem;background:var(--primary);color:#fff;font-family:'Noto Sans JP',sans-serif;font-size:0.85rem;font-weight:700;padding:0.8rem;border-radius:8px;text-decoration:none;min-width:140px;">
+          <svg width="16" height="16" viewBox="0 0 22 22" fill="none"><path d="M6.5 4H4a2 2 0 00-2 2c0 9.25 7.75 17 17 17a2 2 0 002-2v-2.5a1 1 0 00-.8-.98l-3.2-.64a1 1 0 00-.96.3l-1.42 1.42a15.12 15.12 0 01-6.72-6.72l1.42-1.42a1 1 0 00.3-.96L8.48 4.8A1 1 0 007.5 4h-1z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          029-229-2623
+        </a>
+        <button onclick="closeModal('recruit-modal');openModal('contact-modal')" style="flex:1;display:flex;align-items:center;justify-content:center;gap:0.4rem;background:none;border:1.5px solid var(--primary);color:var(--primary);font-family:'Noto Sans JP',sans-serif;font-size:0.85rem;font-weight:700;padding:0.8rem;border-radius:8px;cursor:pointer;min-width:140px;">
+          <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><rect x="2" y="4" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 7l7 4 7-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          フォームで問い合わせ
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MEDICAL MODAL -->
+<div class="modal-overlay" id="medical-modal" onclick="overlayClose(event,'medical-modal')">
+  <div class="modal-box" style="max-width:680px;">
+    <div class="modal-header">
+      <h2 class="modal-title">医療・看護連携</h2>
+      <button class="modal-close" onclick="closeModal('medical-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <p style="font-size:0.88rem;color:var(--text-sub);line-height:1.9;margin-bottom:1.75rem;">複数の医療機関・訪問看護ステーションと連携し、体調変化に迅速に対応できる体制を整えています。</p>
+      <div class="med-grid" style="margin-bottom:1.5rem;">
+        <a class="med-card" href="https://www.sekinaikaiin.com/" target="_blank" rel="noopener"><span class="med-type mt-v">訪問診療</span><p class="med-name">関内科医院 <span class="ext-icon">↗</span></p><p class="med-desc">ひたちなか市大平。急変時の相談対応・診療体制を常時確保。</p></a>
+        <a class="med-card" href="https://hitachihome-cl.com/" target="_blank" rel="noopener"><span class="med-type mt-v">訪問診療</span><p class="med-name">常陸ホームクリニック <span class="ext-icon">↗</span></p><p class="med-desc">在宅医療専門クリニック。定期的な訪問診療を担当。</p></a>
+        <a class="med-card" href="http://www.ibc.or.jp/hitachi/" target="_blank" rel="noopener"><span class="med-type mt-v">訪問診療</span><p class="med-name">いばらき診療所 <span class="ext-icon">↗</span></p><p class="med-desc">地域に根ざした在宅医療機関。訪問診療・往診に対応。</p></a>
+        <a class="med-card" href="https://www.skyaoisora.com/" target="_blank" rel="noopener"><span class="med-type mt-n">訪問看護</span><p class="med-name">訪問看護あおいそら <span class="ext-icon">↗</span></p><p class="med-desc">看護師による定期訪問・健康管理・緊急時対応をサポート。</p></a>
+        <a class="med-card" href="https://tsukimura-dc.com/" target="_blank" rel="noopener"><span class="med-type mt-d">訪問歯科</span><p class="med-name">月村歯科医院 <span class="ext-icon">↗</span></p><p class="med-desc">外出が難しい方への訪問歯科診療。口腔ケアの維持をサポート。</p></a>
+      </div>
+      <div style="background:var(--bg-section);border-left:3px solid var(--primary);border-radius:0 8px 8px 0;padding:0.9rem 1rem;font-size:0.8rem;color:var(--text);line-height:1.8;">緊急時はスタッフが救急車の手配・病院への付き添いを行います。通院介助（30分あたり1,018円）もご利用いただけます。</div>
+    </div>
+  </div>
+</div>
+
+<!-- STAFF BANNER -->
+<section style="background:linear-gradient(135deg,#5a2840,#8a4860,#c47a90);padding:3.5rem 1.5rem;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:2rem;">
+      <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.15em;color:rgba(255,255,255,0.5);text-transform:uppercase;margin-bottom:0.5rem;">Message</p>
+      <h2 style="font-family:'Noto Serif JP',serif;font-size:1.4rem;font-weight:600;color:#fff;">管理者からのご挨拶</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;" class="staff-grid">
+      <div onclick="openModal('msg-director')" role="button" tabindex="0" class="staff-card">
+        <div class="staff-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="12" r="6" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/><path d="M4 28c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <p style="font-size:0.7rem;color:rgba(255,255,255,0.55);letter-spacing:0.1em;margin-bottom:0.3rem;">施設長</p>
+        <p style="font-size:1rem;font-family:'Noto Serif JP',serif;font-weight:600;color:#fff;margin-bottom:0.75rem;">大枝 好秋</p>
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.6);line-height:1.75;">「はるのさと」への想いと<br>施設の取り組みについて</p>
+        <p class="staff-readmore">続きを読む →</p>
+      </div>
+      <div onclick="openModal('msg-day')" role="button" tabindex="0" class="staff-card">
+        <div class="staff-icon" style="overflow:hidden;padding:0;"><img src="images/staff-suzuki.jpg" alt="鈴木良明" style="width:100%;height:100%;object-fit:cover;"></div>
+        <p style="font-size:0.7rem;color:rgba(255,255,255,0.55);letter-spacing:0.1em;margin-bottom:0.3rem;">通所介護 管理者</p>
+        <p style="font-size:1rem;font-family:'Noto Serif JP',serif;font-weight:600;color:#fff;margin-bottom:0.75rem;">鈴木 良明</p>
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.6);line-height:1.75;">デイサービスへの想いと<br>日々の取り組みについて</p>
+        <p class="staff-readmore">続きを読む →</p>
+      </div>
+      <div onclick="openModal('msg-visit')" role="button" tabindex="0" class="staff-card">
+        <div class="staff-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="12" r="6" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/><path d="M4 28c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <p style="font-size:0.7rem;color:rgba(255,255,255,0.55);letter-spacing:0.1em;margin-bottom:0.3rem;">訪問介護 管理者</p>
+        <p style="font-size:1rem;font-family:'Noto Serif JP',serif;font-weight:600;color:#fff;margin-bottom:0.75rem;">森本 由紀江</p>
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.6);line-height:1.75;">訪問介護への想いと<br>ご利用者様へのメッセージ</p>
+        <p class="staff-readmore">続きを読む →</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 桜枝区切り -->
+<div style="text-align:center;padding:0.5rem 0;background:var(--bg-white);line-height:0;">
+  <svg width="320" height="32" viewBox="0 0 320 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.45;">
+    <path d="M20 16 Q80 8 160 16 Q240 24 300 16" stroke="#c47888" stroke-width="1" fill="none"/>
+    <!-- 左の花 -->
+    <circle cx="60" cy="11" r="1.5" fill="#c47888"/>
+    <ellipse cx="60" cy="7" rx="2" ry="3" fill="#e8a0b8" transform="rotate(0 60 11)"/>
+    <ellipse cx="60" cy="7" rx="2" ry="3" fill="#e8a0b8" transform="rotate(72 60 11)"/>
+    <ellipse cx="60" cy="7" rx="2" ry="3" fill="#e8a0b8" transform="rotate(144 60 11)"/>
+    <ellipse cx="60" cy="7" rx="2" ry="3" fill="#e8a0b8" transform="rotate(216 60 11)"/>
+    <ellipse cx="60" cy="7" rx="2" ry="3" fill="#e8a0b8" transform="rotate(288 60 11)"/>
+    <!-- 中央の花 -->
+    <circle cx="160" cy="16" r="1.5" fill="#c47888"/>
+    <ellipse cx="160" cy="12" rx="2" ry="3" fill="#e8a0b8" transform="rotate(0 160 16)"/>
+    <ellipse cx="160" cy="12" rx="2" ry="3" fill="#e8a0b8" transform="rotate(72 160 16)"/>
+    <ellipse cx="160" cy="12" rx="2" ry="3" fill="#e8a0b8" transform="rotate(144 160 16)"/>
+    <ellipse cx="160" cy="12" rx="2" ry="3" fill="#e8a0b8" transform="rotate(216 160 16)"/>
+    <ellipse cx="160" cy="12" rx="2" ry="3" fill="#e8a0b8" transform="rotate(288 160 16)"/>
+    <!-- 右の花 -->
+    <circle cx="260" cy="21" r="1.5" fill="#c47888"/>
+    <ellipse cx="260" cy="17" rx="2" ry="3" fill="#e8a0b8" transform="rotate(0 260 21)"/>
+    <ellipse cx="260" cy="17" rx="2" ry="3" fill="#e8a0b8" transform="rotate(72 260 21)"/>
+    <ellipse cx="260" cy="17" rx="2" ry="3" fill="#e8a0b8" transform="rotate(144 260 21)"/>
+    <ellipse cx="260" cy="17" rx="2" ry="3" fill="#e8a0b8" transform="rotate(216 260 21)"/>
+    <ellipse cx="260" cy="17" rx="2" ry="3" fill="#e8a0b8" transform="rotate(288 260 21)"/>
+    <!-- 花びら散り -->
+    <ellipse cx="100" cy="20" rx="2.5" ry="2" fill="#f8d0dc" transform="rotate(30 100 20)" opacity="0.7"/>
+    <ellipse cx="200" cy="10" rx="2" ry="1.5" fill="#f8d0dc" transform="rotate(-20 200 10)" opacity="0.7"/>
+    <ellipse cx="140" cy="25" rx="2" ry="1.5" fill="#f8d0dc" transform="rotate(50 140 25)" opacity="0.6"/>
+    <ellipse cx="230" cy="14" rx="2.5" ry="2" fill="#f8d0dc" transform="rotate(-40 230 14)" opacity="0.6"/>
+  </svg>
+</div>
+<!-- ACCESS -->
+<section class="section section-alt" id="access">
+  <div class="si">
+    <div style="margin-bottom:3rem;"><div class="title-bar"></div><div class="sec-label">Access</div><h2 class="sec-title">アクセス</h2><p class="sec-desc">茨城県ひたちなか市。特別養護老人ホーム「春寿園」のとなりです。</p></div>
+    <div class="access-wrap">
+      <div class="access-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d567.7743794526748!2d140.51057780597762!3d36.38942605280535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6022250020b5ec05%3A0x4ccaa0758ea85920!2z56S-5Lya56aP56WJ5rOV5Lq65pil5a-_5LyaIOOCteODvOODk-OCueS7mOOBjemrmOm9ouiAheWQkeOBkeS9j-WuhSDjga_jgovjga7jgZXjgag!5e0!3m2!1sja!2sjp!4v1779673742454!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <div class="access-info">
+        <div><p class="ab-title">所在地</p><p class="ab-body">〒312-0034<br>茨城県ひたちなか市大字堀口79番地2</p></div>
+        <div class="a-div"></div>
+        <div><p class="ab-title">お車</p><p class="ab-body">常磐自動車道「那珂IC」より約16分<br>駐車場あり（無料）</p></div>
+        <div class="a-div"></div>
+        <div><p class="ab-title">電車・バス</p><p class="ab-body">JR常磐線「勝田駅」より徒歩約19分<br>茨城交通「堀口バス停」下車 徒歩10分</p></div>
+        <div class="a-div"></div>
+        <div><p class="ab-title">目印</p><p class="ab-body">特別養護老人ホーム「春寿園」のとなり<br>筑波台南交差点そば</p></div>
+        <div class="a-div"></div>
+        <div>
+          <p class="ab-title">お電話でのお問い合わせ</p>
+          <p class="ab-body"><a href="tel:0292292623" style="font-size:1.2rem;font-weight:700;color:var(--primary-dark);text-decoration:none;">029-229-2623</a><br>受付：月〜土 9:00〜17:30</p>
+          <button onclick="openModal('contact-modal')" style="margin-top:0.9rem;background:var(--primary);color:#fff;border:none;border-radius:7px;padding:0.65rem 1.5rem;font-size:0.85rem;font-weight:700;cursor:pointer;font-family:'Noto Sans JP',sans-serif;letter-spacing:0.04em;">見学・お問い合わせフォーム</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div>
+        <div class="ft-logo"><div class="ft-logo-mark"><svg viewBox="0 0 28 28" fill="none">
+  <defs>
+    <path id="sk" d="M14,14 C10.5,12 9.5,8 11.5,5.8 Q13,4.2 14,5.5 Q15,4.2 16.5,5.8 C18.5,8 17.5,12 14,14Z"/>
+  </defs>
+  <use href="#sk" fill="rgba(255,255,255,0.92)" transform="rotate(0,14,14)"/>
+  <use href="#sk" fill="rgba(255,240,244,0.88)" transform="rotate(72,14,14)"/>
+  <use href="#sk" fill="rgba(255,255,255,0.92)" transform="rotate(144,14,14)"/>
+  <use href="#sk" fill="rgba(255,240,244,0.88)" transform="rotate(216,14,14)"/>
+  <use href="#sk" fill="rgba(255,255,255,0.92)" transform="rotate(288,14,14)"/>
+  <circle cx="14" cy="14" r="2.8" fill="rgba(255,200,215,0.95)"/>
+  <circle cx="14" cy="11.4" r="0.55" fill="rgba(255,160,180,0.9)"/>
+  <circle cx="12.2" cy="12.6" r="0.55" fill="rgba(255,160,180,0.9)"/>
+  <circle cx="12.9" cy="14.9" r="0.55" fill="rgba(255,160,180,0.9)"/>
+  <circle cx="15.1" cy="14.9" r="0.55" fill="rgba(255,160,180,0.9)"/>
+  <circle cx="15.8" cy="12.6" r="0.55" fill="rgba(255,160,180,0.9)"/>
+</svg></div><span class="ft-logo-name">はるのさと</span></div>
+        <p class="ft-desc">社会福祉法人 春寿会<br>〒312-0034 茨城県ひたちなか市大字堀口79番地2<br>TEL：029-229-2623　FAX：029-229-2624<br>Mail：harunosato@syunjyukai2225.or.jp<br>施設長：大枝 好秋<br><span style="font-size:0.72rem;opacity:0.6;">デイサービス：0892100314　訪問介護：0872102405</span></p>
+      </div>
+      <div>
+        <p class="ft-col-title">サービス</p>
+        <ul class="ft-links"><li><a href="#" onclick="openModal('room-modal');return false;">サービス付き高齢者向け住宅</a></li><li><a href="#">デイサービス「はるのさとデイ」</a></li><li><a href="#">訪問介護「はるのさと訪問」</a></li></ul>
+      </div>
+      <div>
+        <p class="ft-col-title">メニュー</p>
+        <ul class="ft-links"><li><a href="#home">ホーム</a></li><li><a href="#news">新着情報</a></li><li><a href="#facilities">サービス紹介</a></li><li><a href="#" onclick="openModal('medical-modal');return false;">医療・看護連携</a></li><li><a href="#access">アクセス</a></li><li><a href="#" onclick="openModal('recruit-modal');return false;">採用情報</a></li>
+          <li><a href="#" onclick="openModal('contact-modal');return false;">お問い合わせ</a></li></ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <div class="ft-bl"><a href="#">個人情報保護方針</a><a href="#">サイトポリシー</a><a href="#">採用情報</a></div>
+      <p class="ft-copy">© 2025 社会福祉法人 春寿会 はるのさと All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="ページ上部へ"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 15V5M5 10l5-5 5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+<!-- ══════════════════════════════════
+     MODAL 0: ニュース詳細
+══════════════════════════════════ -->
+<div class="modal-overlay" id="news-modal" onclick="overlayClose(event,'news-modal')">
+  <div class="modal-box" style="max-width:640px;">
+    <div class="modal-header">
+      <div>
+        <div id="nm-tag" style="margin-bottom:0.4rem;"></div>
+        <h2 class="modal-title" id="nm-title" style="font-size:1.05rem;"></h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('news-modal')">✕</button>
+    </div>
+    <div class="modal-body" style="padding-top:1.25rem;">
+      <p id="nm-date" style="font-size:0.78rem;color:var(--text-sub);margin-bottom:1.25rem;"></p>
+      <div id="nm-gallery" class="nm-gallery" style="display:none;"></div>
+      <div id="nm-body" style="font-size:0.9rem;color:var(--text);line-height:2;white-space:pre-wrap;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     MODAL: デイサービス
+══════════════════════════════════ -->
+<div class="modal-overlay" id="day-modal" onclick="overlayClose(event,'day-modal')">
+  <div class="modal-box" style="max-width:680px;">
+    <div class="modal-header">
+      <div>
+        <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;color:var(--primary);margin-bottom:0.3rem;">DAY SERVICE</p>
+        <h2 class="modal-title">デイサービス はるのさと</h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('day-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <div class="modal-section">
+        <p class="modal-sec-title">サービス概要</p>
+        <dl class="info-dl">
+          <dt class="info-dt">営業日</dt><dd class="info-dd">月曜日〜土曜日（1月1日を除く）</dd>
+          <dt class="info-dt">営業時間</dt><dd class="info-dd">9:00〜17:00（サービス提供：9:30〜16:30）</dd>
+          <dt class="info-dt">定員</dt><dd class="info-dd">14名</dd>
+          <dt class="info-dt">送迎エリア</dt><dd class="info-dd">ひたちなか市内（市外は1kmあたり100円）</dd>
+          <dt class="info-dt">管理者</dt><dd class="info-dd">鈴木 良明</dd>
+        </dl>
+      </div>
+
+      <div class="modal-section">
+        <p class="modal-sec-title">サービス内容</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;">
+          <div style="background:var(--bg-section);border-radius:8px;padding:0.75rem 1rem;">
+            <p style="font-size:0.72rem;font-weight:700;color:var(--primary);margin-bottom:0.3rem;">食事・入浴</p>
+            <p style="font-size:0.8rem;color:var(--text-sub);line-height:1.75;">食事介助・嚥下困難者向け対応<br>全身浴・部分浴・清拭・洗髪</p>
+          </div>
+          <div style="background:var(--bg-section);border-radius:8px;padding:0.75rem 1rem;">
+            <p style="font-size:0.72rem;font-weight:700;color:var(--primary);margin-bottom:0.3rem;">介護・健康管理</p>
+            <p style="font-size:0.8rem;color:var(--text-sub);line-height:1.75;">排泄・更衣・服薬介助<br>看護職員による健康管理</p>
+          </div>
+          <div style="background:var(--bg-section);border-radius:8px;padding:0.75rem 1rem;grid-column:1/-1;">
+            <p style="font-size:0.72rem;font-weight:700;color:var(--primary);margin-bottom:0.3rem;">機能訓練</p>
+            <p style="font-size:0.8rem;color:var(--text-sub);line-height:1.75;">機能訓練指導員による専門的訓練。日常生活動作を通じた訓練や器械・器具を使用した訓練を実施。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <p class="modal-sec-title">利用料金の目安（1割負担・7時間以上8時間未満）</p>
+        <div style="overflow-x:auto;">
+          <table class="fee-table-sm">
+            <thead><tr><th>要介護度</th><th>基本料金</th><th>入浴加算</th><th>昼食費</th></tr></thead>
+            <tbody>
+              <tr><td>要介護１</td><td>764円/日</td><td rowspan="5" style="vertical-align:middle;text-align:center;">41円</td><td rowspan="5" style="vertical-align:middle;text-align:center;">690円</td></tr>
+              <tr><td>要介護２</td><td>903円/日</td></tr>
+              <tr><td>要介護３</td><td>1,047円/日</td></tr>
+              <tr><td>要介護４</td><td>1,189円/日</td></tr>
+              <tr><td>要介護５</td><td>1,331円/日</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fee-note-sm">※ 処遇改善加算（9.0%）が別途加算されます。<br>※ 同一建物居住者は1回あたり96円の減算があります。<br>※ 当日キャンセルは500円のキャンセル料が発生します。<br>※ 2割・3割負担の方は上記の2倍・3倍となります。</p>
+      </div>
+
+      <div class="modal-section">
+        <p class="modal-sec-title">職員体制</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">管理者　鈴木 良明</span>
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">生活相談員</span>
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">介護職員</span>
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">機能訓練指導員</span>
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">看護職員</span>
+        </div>
+      </div>
+
+      <div style="text-align:center;padding-top:0.5rem;">
+        <button class="submit-btn" onclick="closeModal('day-modal');openModal('contact-modal')">見学・お問い合わせへ進む <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     MODAL: 訪問介護
+══════════════════════════════════ -->
+<div class="modal-overlay" id="visit-modal" onclick="overlayClose(event,'visit-modal')">
+  <div class="modal-box" style="max-width:680px;">
+    <div class="modal-header">
+      <div>
+        <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;color:var(--primary);margin-bottom:0.3rem;">HOME VISIT CARE</p>
+        <h2 class="modal-title">訪問介護 はるのさと</h2>
+      </div>
+      <button class="modal-close" onclick="closeModal('visit-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <div class="modal-section">
+        <p class="modal-sec-title">サービス概要</p>
+        <dl class="info-dl">
+          <dt class="info-dt">営業日</dt><dd class="info-dd">月曜日〜日曜日（年中無休）</dd>
+          <dt class="info-dt">営業時間</dt><dd class="info-dd">7:00〜19:00</dd>
+          <dt class="info-dt">対応エリア</dt><dd class="info-dd">ひたちなか市内（市外は1kmあたり50円）</dd>
+          <dt class="info-dt">管理者</dt><dd class="info-dd">森本 由紀江</dd>
+        </dl>
+      </div>
+
+      <div class="modal-section">
+        <p class="modal-sec-title">サービス内容</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+          <div style="background:var(--bg-section);border-radius:8px;padding:1rem 1.1rem;border-top:3px solid var(--primary);">
+            <p style="font-size:0.78rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;">身体介護</p>
+            <p style="font-size:0.78rem;color:var(--text-sub);line-height:1.85;">排泄介助・食事介助<br>入浴介助・体位変換<br>起床・就寝介助 など</p>
+          </div>
+          <div style="background:var(--bg-section);border-radius:8px;padding:1rem 1.1rem;border-top:3px solid var(--primary-light);">
+            <p style="font-size:0.78rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;">生活援助</p>
+            <p style="font-size:0.78rem;color:var(--text-sub);line-height:1.85;">掃除・洗濯<br>ベッドメイキング・布団干し<br>買い物・薬の受取 など</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <p class="modal-sec-title">利用料金の目安（1割負担・8時〜18時）</p>
+        <div style="overflow-x:auto;">
+          <table class="fee-table-sm">
+            <thead><tr><th>種別・時間</th><th>1割負担</th><th>2割負担</th><th>3割負担</th></tr></thead>
+            <tbody>
+              <tr><td><strong>身体介護</strong> 20分未満</td><td>167円</td><td>333円</td><td>500円</td></tr>
+              <tr><td><strong>身体介護</strong> 20〜30分</td><td>250円</td><td>499円</td><td>748円</td></tr>
+              <tr><td><strong>身体介護</strong> 30〜60分未満</td><td>396円</td><td>791円</td><td>1,186円</td></tr>
+              <tr><td><strong>生活援助</strong> 20〜45分</td><td>183円</td><td>366円</td><td>549円</td></tr>
+              <tr><td><strong>生活援助</strong> 45分以上</td><td>225円</td><td>450円</td><td>674円</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fee-note-sm">※ 7〜8時・18〜20時の早朝・夜間帯は上記の約1.25倍となります。<br>※ 処遇改善加算（22.4%）が別途加算されます。<br>※ 同一建物居住者は月額利用料の10〜12%が減算されます。<br>※ キャンセルは12時間前まで無料。それ以降は1,000円。</p>
+      </div>
+
+      <div class="modal-section">
+        <p class="modal-sec-title">職員体制</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">管理者　森本 由紀江</span>
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">サービス提供責任者</span>
+          <span style="font-size:0.78rem;background:var(--bg-section);padding:0.3rem 0.75rem;border-radius:20px;">訪問介護員</span>
+        </div>
+      </div>
+
+      <div style="text-align:center;padding-top:0.5rem;">
+        <button class="submit-btn" onclick="closeModal('visit-modal');openModal('contact-modal')">見学・お問い合わせへ進む <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     MODAL 1: 暮らし・居室詳細
+══════════════════════════════════ -->
+<div class="modal-overlay" id="room-modal" onclick="overlayClose(event,'room-modal')">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2 class="modal-title">暮らし・費用の詳細</h2>
+      <button class="modal-close" onclick="closeModal('room-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <!-- 居室タイプ -->
+      <div class="modal-section">
+        <p class="modal-sec-title">居室タイプ</p>
+        <div class="room-grid">
+          <div class="room-card">
+            <p class="room-floor">2階（14室）</p>
+            <div class="room-size">19.87<span>㎡</span></div>
+            <p class="room-count">家賃 45,000円／月</p>
+          </div>
+          <div class="room-card">
+            <p class="room-floor">1階（6室）</p>
+            <div class="room-size">19.68<span>㎡</span></div>
+            <p class="room-count">家賃 48,000円／月</p>
+          </div>
+        </div>
+        <p style="font-size:0.78rem;color:var(--text-sub);line-height:1.8;">全室個室・洗面台付。共用浴室2か所（個室）。エレベーターあり。延床面積 767.43㎡。</p>
+      </div>
+
+      <!-- 入居条件 -->
+      <div class="modal-section">
+        <p class="modal-sec-title">入居条件</p>
+        <dl class="info-dl">
+          <dt class="info-dt">対象者</dt><dd class="info-dd">60歳以上かつ要支援・要介護認定を受けている方。認知症の方も入居可。</dd>
+          <dt class="info-dt">入居形態</dt><dd class="info-dd">単身・夫婦どちらも可</dd>
+          <dt class="info-dt">体験入居</dt><dd class="info-dd">最長5日間・一泊二日 5,093円（食費別）</dd>
+          <dt class="info-dt">開設</dt><dd class="info-dd">平成27年1月10日（2015年）</dd>
+        </dl>
+      </div>
+
+      <!-- 月額費用 -->
+      <div class="modal-section">
+        <p class="modal-sec-title">月額費用の目安（2階居室の場合）</p>
+        <div class="fee-simple">
+          <div class="fee-row"><span class="fee-label">家賃</span><span class="fee-val">45,000円</span></div>
+          <div class="fee-row"><span class="fee-label">食費（3食×30日）</span><span class="fee-val">51,900円</span></div>
+          <div class="fee-row"><span class="fee-label">共益費（光熱水費込）</span><span class="fee-val">12,000円</span></div>
+          <div class="fee-row"><span class="fee-label">基本サービス費</span><span class="fee-val">18,333円</span></div>
+          <div class="fee-row"><span class="fee-label">基本月額合計</span><span class="fee-val">127,233円</span></div>
+        </div>
+        <p class="fee-note-sm">※1階居室は家賃 48,000円（月額合計 130,233円）<br>※敷金・礼金・前払金は一切不要です</p>
+      </div>
+
+      <!-- 要介護度別合計 -->
+      <div class="modal-section">
+        <p class="modal-sec-title">介護保険自己負担を含めた月額合計（1割負担）</p>
+        <div style="overflow-x:auto;">
+          <table class="fee-table-sm">
+            <thead><tr><th>要介護度</th><th>介護保険自己負担</th><th>月額合計（2階）</th></tr></thead>
+            <tbody>
+              <tr><td>要介護１</td><td>0〜16,765円</td><td>127,233〜143,998円</td></tr>
+              <tr><td>要介護２</td><td>0〜19,705円</td><td>127,233〜146,938円</td></tr>
+              <tr><td>要介護３</td><td>0〜27,048円</td><td>127,233〜154,281円</td></tr>
+              <tr><td>要介護４</td><td>0〜30,938円</td><td>127,233〜158,171円</td></tr>
+              <tr><td>要介護５</td><td>0〜36,217円</td><td>127,233〜163,450円</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fee-note-sm">※介護保険サービス（訪問介護・デイサービス等）の利用料は別途自己負担分が発生します。<br>※所得に応じた負担限度額認定制度が利用できる場合があります。</p>
+      </div>
+
+      <!-- 入居の流れ -->
+      <div class="modal-section">
+        <p class="modal-sec-title">入居までの流れ</p>
+        <div class="step-mini">
+          <div class="step-mini-item"><div class="step-mini-num">1</div><div class="step-mini-text"><p class="step-mini-title">お電話・見学のご予約</p><p class="step-mini-desc">029-229-2623へお気軽にご連絡ください。見学は随時受付中です。</p></div></div>
+          <div class="step-mini-item"><div class="step-mini-num">2</div><div class="step-mini-text"><p class="step-mini-title">施設見学・ご相談</p><p class="step-mini-desc">スタッフが丁寧にご案内。費用・空室・生活イメージについてお答えします。</p></div></div>
+          <div class="step-mini-item"><div class="step-mini-num">3</div><div class="step-mini-text"><p class="step-mini-title">申込書・必要書類の提出</p><p class="step-mini-desc">介護保険の申請がまだの方も、手続きのサポートをいたします。</p></div></div>
+          <div class="step-mini-item"><div class="step-mini-num">4</div><div class="step-mini-text"><p class="step-mini-title">契約・重要事項のご説明</p><p class="step-mini-desc">サービス内容・費用を書面でご説明のうえ契約を締結します。</p></div></div>
+          <div class="step-mini-item" style="padding-bottom:0;"><div class="step-mini-num">5</div><div class="step-mini-text"><p class="step-mini-title">ご入居・生活スタート</p><p class="step-mini-desc">入居後もスタッフがサポート。デイ・訪問介護との組み合わせも柔軟に対応します。</p></div></div>
+        </div>
+      </div>
+
+      <div style="text-align:center;padding-top:0.5rem;">
+        <button class="submit-btn" onclick="closeModal('room-modal');openModal('contact-modal')">見学・お問い合わせへ進む <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M8 3l5 5-5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     MODAL 2: お問い合わせフォーム
+══════════════════════════════════ -->
+<div class="modal-overlay" id="contact-modal" onclick="overlayClose(event,'contact-modal')">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2 class="modal-title">見学・お問い合わせ</h2>
+      <button class="modal-close" onclick="closeModal('contact-modal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <!-- 電話 -->
+      <div style="background:var(--bg-section);border-radius:10px;padding:1rem 1.25rem;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;">
+        <div><p style="font-size:0.75rem;color:var(--text-sub);margin-bottom:0.2rem;">お電話でのご相談</p><a href="tel:0292292623" style="font-size:1.3rem;font-weight:700;color:var(--primary-dark);text-decoration:none;">029-229-2623</a></div>
+        <p style="font-size:0.78rem;color:var(--text-sub);">月〜土 9:00〜17:30</p>
+      </div>
+
+      <form id="contact-form" action="https://formspree.io/f/xpqnyyvg" method="POST" novalidate>
+        <div class="form-2col">
+          <div class="form-row"><label class="form-label">お名前 <span class="form-req">＊</span></label><input class="form-input" type="text" name="お名前" required placeholder="山田 花子"></div>
+          <div class="form-row"><label class="form-label">ふりがな</label><input class="form-input" type="text" name="ふりがな" placeholder="やまだ はなこ"></div>
+        </div>
+        <div class="form-2col">
+          <div class="form-row"><label class="form-label">電話番号 <span class="form-req">＊</span></label><input class="form-input" type="tel" name="電話番号" required placeholder="029-229-XXXX"></div>
+          <div class="form-row"><label class="form-label">メールアドレス</label><input class="form-input" type="email" name="メールアドレス" placeholder="example@mail.com"></div>
+        </div>
+        <div class="form-row">
+          <label class="form-label" style="margin-bottom:0.6rem;">お問い合わせの種別 <span class="form-req">＊</span></label>
+          <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+            <label class="check-pill"><input type="checkbox" name="種別" value="施設見学を希望"> 施設見学を希望</label>
+            <label class="check-pill"><input type="checkbox" name="種別" value="体験入居を希望"> 体験入居を希望</label>
+            <label class="check-pill"><input type="checkbox" name="種別" value="費用について"> 費用について</label>
+            <label class="check-pill"><input type="checkbox" name="種別" value="資料請求"> 資料請求</label>
+            <label class="check-pill"><input type="checkbox" name="種別" value="その他"> その他</label>
+          </div>
+        </div>
+        <div class="form-row"><label class="form-label">見学ご希望日時（わかる範囲で）</label><input class="form-input" type="text" name="見学希望日時" placeholder="例：6月下旬の午前中、平日ならいつでも　など"></div>
+        <div class="form-row"><label class="form-label">ご質問・ご要望</label><textarea class="form-input" name="メッセージ" rows="3" placeholder="ご自由にお書きください" style="resize:vertical;"></textarea></div>
+        <div class="form-row" style="background:var(--bg-section);border-radius:8px;padding:0.9rem 1rem;">
+          <label style="display:flex;align-items:flex-start;gap:0.6rem;cursor:pointer;font-size:0.82rem;color:var(--text-sub);line-height:1.75;">
+            <input type="checkbox" id="privacy-check" required style="margin-top:0.2rem;accent-color:var(--primary);flex-shrink:0;">
+            <span><a href="#" style="color:var(--primary);">個人情報保護方針</a>に同意のうえ送信します。 <span class="form-req">＊</span></span>
+          </label>
+        </div>
+        <div style="text-align:center;margin-top:1.25rem;">
+          <button type="submit" class="submit-btn" id="submit-btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M8 3l5 5-5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            送信する
+          </button>
+        </div>
+      </form>
+
+      <div id="form-success" style="display:none;text-align:center;padding:2rem 1rem;">
+        <div style="width:56px;height:56px;background:#e8f4ec;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M4 13l7 7L22 6" stroke="#4a7c5e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3 style="font-family:'Noto Serif JP',serif;font-size:1.1rem;color:var(--text);margin-bottom:0.6rem;">送信が完了しました</h3>
+        <p style="font-size:0.85rem;color:var(--text-sub);line-height:1.9;">ありがとうございます。通常2営業日以内にご返答いたします。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+
+<!-- モバイル固定CTA -->
+<div id="mobile-cta" style="
+  display:none;
+  position:fixed; bottom:0; left:0; right:0; z-index:300;
+  background:rgba(20,30,40,0.95);
+  backdrop-filter:blur(8px);
+  padding:0.55rem 1rem;
+  padding-bottom:calc(0.55rem + env(safe-area-inset-bottom));
+  box-shadow:0 -2px 12px rgba(0,0,0,0.2);
+  gap:0.5rem;
+">
+  <a href="tel:0292292623" style="
+    flex:1; display:flex; align-items:center; justify-content:center; gap:0.35rem;
+    background:#4a6878; color:#fff; font-family:'Noto Sans JP',sans-serif;
+    font-size:0.75rem; font-weight:700; padding:0.5rem 0.4rem;
+    border-radius:6px; text-decoration:none; letter-spacing:0.02em;
+  ">
+    <svg width="13" height="13" viewBox="0 0 22 22" fill="none">
+      <path d="M6.5 4H4a2 2 0 00-2 2c0 9.25 7.75 17 17 17a2 2 0 002-2v-2.5a1 1 0 00-.8-.98l-3.2-.64a1 1 0 00-.96.3l-1.42 1.42a15.12 15.12 0 01-6.72-6.72l1.42-1.42a1 1 0 00.3-.96L8.48 4.8A1 1 0 007.5 4h-1z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+    お電話で相談
+  </a>
+  <button onclick="openModal('contact-modal')" style="
+    flex:1; display:flex; align-items:center; justify-content:center; gap:0.35rem;
+    background:var(--accent); color:#fff; font-family:'Noto Sans JP',sans-serif;
+    font-size:0.75rem; font-weight:700; padding:0.5rem 0.4rem;
+    border-radius:6px; border:none; cursor:pointer; letter-spacing:0.02em;
+  ">
+    <svg width="13" height="13" viewBox="0 0 18 18" fill="none">
+      <rect x="2" y="4" width="14" height="10" rx="2" stroke="#fff" stroke-width="1.5"/>
+      <path d="M2 7l7 4 7-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    見学・資料請求
+  </button>
+</div>
+
+
+</body>
+</html>
